@@ -11,7 +11,51 @@
 }
 
 /* Style PieChart */
-.chartpie {
+.chartpie {.root {
+    -fx-background-color: #f0f8ff; /* Light blue background */
+}
+
+    .button {
+        -fx-background-color: #007bff; /* Blue */
+        -fx-text-fill: white; /* White text color */
+        -fx-font-size: 14px;
+        -fx-font-weight: bold;
+        -fx-padding: 10px 20px; /* Add some padding to the button */
+        -fx-background-radius: 20px; /* Rounded corners */
+    }
+
+    .table-view {
+        -fx-background-color: #ffffff; /* White background for TableView */
+        -fx-background-radius: 20px; /* Rounded corners */
+    }
+
+    .chart {
+        -fx-background-radius: 20px; /* Rounded corners */
+    }
+
+    .chart-title {
+        -fx-font-size: 20px;
+        -fx-font-weight: bold;
+    }
+
+    .chart-legend {
+        -fx-font-size: 14px;
+        -fx-font-weight: bold;
+    }
+
+    .table-view .column-header-background {
+        -fx-background-color: #007bff; /* Blue background for column headers */
+    }
+
+    .table-view .column-header {
+        -fx-background-color: #007bff; /* Blue text color for column headers */
+        -fx-text-fill: white; /* White text color */
+    }
+
+    .table-row-cell {
+        -fx-background-color: #f0f8ff; /* Light blue background for table rows */
+    }
+
     -fx-background-color: #ffffff;
 }
 

@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a368374-5399-4668-98f8-7298be8289e6" name="Changes" comment="project start/near completion" />
+    <list default="true" id="7a368374-5399-4668-98f8-7298be8289e6" name="Changes" comment="project start/near completion">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movietracker/movietrackerapp/MovieTrackerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movietracker/movietrackerapp/MovieTrackerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/movietracker/movietrackerapp/Styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/movietracker/movietrackerapp/Styles.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master1" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,7 +56,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "assingment",
     "last_opened_file_path": "C:/Users/pinpn/OneDrive/Desktop/Movie-tracker/Movie-tracker-app/src/main/resources/com/movietracker/movietrackerapp",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -94,7 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1712743459999</updated>
       <workItem from="1712743461047" duration="9480000" />
-      <workItem from="1712769386621" duration="23270000" />
+      <workItem from="1712769386621" duration="24868000" />
     </task>
     <task id="LOCAL-00001" summary="project start">
       <option name="closed" value="true" />
@@ -128,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712815077906</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="project start/near completion">
+      <option name="closed" value="true" />
+      <created>1712815584154</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712815584154</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

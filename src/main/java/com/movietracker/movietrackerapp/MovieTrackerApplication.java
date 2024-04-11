@@ -1,5 +1,7 @@
 package com.movietracker.movietrackerapp;
-
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.geometry.Pos;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -11,6 +13,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
+import java.io.InputStream;
+
 
 import java.sql.*;
 
@@ -23,6 +27,7 @@ public class MovieTrackerApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+
         tableView = new TableView<>();
         pieChart = new PieChart();
 
@@ -44,6 +49,31 @@ public class MovieTrackerApplication extends Application {
             }
         });
 
+        // Load the icon image
+        Image icon = new Image(getClass().getResourceAsStream("icon.png"));
+
+        // Create an ImageView for the icon
+        ImageView iconView = new ImageView(icon);
+        iconView.setFitWidth(32); // Set the width of the icon
+        iconView.setFitHeight(32); // Set the height of the icon
+
+        InputStream iconStream = getClass().getResourceAsStream("icon.png");
+        if (iconStream != null) {
+            Image iconImage = new Image(iconStream);
+            primaryStage.getIcons().add(iconImage);
+        } else {
+            System.err.println("Icon image not found.");
+        }
+
+        // Create an HBox for the top layout
+        HBox topBox = new HBox(switchButton, iconView);
+        topBox.setAlignment(Pos.CENTER_RIGHT); // Align to center right
+        topBox.setSpacing(10); // Add some spacing between the button and icon
+
+        // Add the top layout to the root
+        root.setTop(topBox);
+
+
         // Add button to the root
         root.setTop(new HBox(switchButton));
 
@@ -54,6 +84,16 @@ public class MovieTrackerApplication extends Application {
 
         // Load data from MySQL database
         loadDataFromDatabase();
+
+        // Load external CSS file
+        String cssFile = getClass().getResource("styles.css").toExternalForm();
+
+        // Apply CSS to pieChartScene
+        pieChartScene.getStylesheets().add(cssFile);
+
+        // Apply CSS to tableViewScene
+        tableViewScene.getStylesheets().add(cssFile);
+
     }
 
     private Scene createTableViewScene() {
