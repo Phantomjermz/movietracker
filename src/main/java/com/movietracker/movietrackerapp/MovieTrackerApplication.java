@@ -1,7 +1,5 @@
 package com.movietracker.movietrackerapp;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.geometry.Pos;
+
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -10,12 +8,13 @@ import javafx.scene.chart.PieChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.geometry.Pos;
 import javafx.stage.Stage;
 import java.io.InputStream;
-
-
 import java.sql.*;
 
 public class MovieTrackerApplication extends Application {
@@ -27,17 +26,18 @@ public class MovieTrackerApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-
+        // Initialize TableView and PieChart
         tableView = new TableView<>();
         pieChart = new PieChart();
 
+        // Create BorderPane for layout
         BorderPane root = new BorderPane();
         root.setLeft(tableView);
         root.setCenter(pieChart);
 
         // Create scenes
         pieChartScene = new Scene(root, 800, 600);
-        tableViewScene = createTableViewScene();
+        tableViewScene = createTableViewScene(primaryStage);
 
         // Create switch button
         Button switchButton = new Button("Switch to Table View");
@@ -50,20 +50,19 @@ public class MovieTrackerApplication extends Application {
         });
 
         // Load the icon image
-        Image icon = new Image(getClass().getResourceAsStream("icon.png"));
-
-        // Create an ImageView for the icon
-        ImageView iconView = new ImageView(icon);
-        iconView.setFitWidth(32); // Set the width of the icon
-        iconView.setFitHeight(32); // Set the height of the icon
-
+        Image iconImage = null;
         InputStream iconStream = getClass().getResourceAsStream("icon.png");
         if (iconStream != null) {
-            Image iconImage = new Image(iconStream);
+            iconImage = new Image(iconStream);
             primaryStage.getIcons().add(iconImage);
         } else {
             System.err.println("Icon image not found.");
         }
+
+        // Create an ImageView for the icon
+        ImageView iconView = new ImageView(iconImage);
+        iconView.setFitWidth(32); // Set the width of the icon
+        iconView.setFitHeight(32); // Set the height of the icon
 
         // Create an HBox for the top layout
         HBox topBox = new HBox(switchButton, iconView);
@@ -73,10 +72,6 @@ public class MovieTrackerApplication extends Application {
         // Add the top layout to the root
         root.setTop(topBox);
 
-
-        // Add button to the root
-        root.setTop(new HBox(switchButton));
-
         // Set primary stage
         primaryStage.setScene(pieChartScene);
         primaryStage.setTitle("Movie Database Viewer");
@@ -85,19 +80,27 @@ public class MovieTrackerApplication extends Application {
         // Load data from MySQL database
         loadDataFromDatabase();
 
-        // Load external CSS file
+        // Load CSS file
         String cssFile = getClass().getResource("styles.css").toExternalForm();
 
-        // Apply CSS to pieChartScene
+        // CSS to pieChart
         pieChartScene.getStylesheets().add(cssFile);
 
-        // Apply CSS to tableViewScene
+        // CSS to tableViewScene
         tableViewScene.getStylesheets().add(cssFile);
-
     }
 
-    private Scene createTableViewScene() {
+    private Scene createTableViewScene(Stage primaryStage) {
+        // Create TableView scene
         BorderPane tableViewRoot = new BorderPane(tableView);
+        Button switchBackButton = new Button("Switch to Pie Chart");
+        switchBackButton.setOnAction(event -> {
+            primaryStage.setScene(pieChartScene);
+        });
+        HBox topBox = new HBox(switchBackButton);
+        topBox.setAlignment(Pos.CENTER_RIGHT);
+        topBox.setSpacing(10);
+        tableViewRoot.setTop(topBox);
         return new Scene(tableViewRoot, 800, 600);
     }
 
@@ -119,11 +122,11 @@ public class MovieTrackerApplication extends Application {
                 double worldwideGross = resultSet.getDouble("Worldwide_Gross");
                 double budget = resultSet.getDouble("Budget");
 
-                // Populate TableView
+                // Populating TableView
                 movieList.add(new Movie(title, year, worldwideGross, budget));
             }
 
-            // Add columns to TableView
+            // Adding columns to TableView
             TableColumn<Movie, String> titleColumn = new TableColumn<>("Title");
             titleColumn.setCellValueFactory(cellData -> cellData.getValue().titleProperty());
 

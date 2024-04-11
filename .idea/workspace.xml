@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a368374-5399-4668-98f8-7298be8289e6" name="Changes" comment="project start/near completion">
+    <list default="true" id="7a368374-5399-4668-98f8-7298be8289e6" name="Changes" comment="added css and logo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/movietracker/movietrackerapp/MovieTrackerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movietracker/movietrackerapp/MovieTrackerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/movietracker/movietrackerapp/Styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/movietracker/movietrackerapp/Styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +97,7 @@
       <option name="presentableId" value="Default" />
       <updated>1712743459999</updated>
       <workItem from="1712743461047" duration="9480000" />
-      <workItem from="1712769386621" duration="24868000" />
+      <workItem from="1712769386621" duration="26293000" />
     </task>
     <task id="LOCAL-00001" summary="project start">
       <option name="closed" value="true" />
@@ -141,7 +139,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712815584154</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added css and logo">
+      <option name="closed" value="true" />
+      <created>1712817202817</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1712817202817</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,7 +167,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="project start" />
     <MESSAGE value="project start/near completion" />
-    <option name="LAST_COMMIT_MESSAGE" value="project start/near completion" />
+    <MESSAGE value="added css and logo" />
+    <option name="LAST_COMMIT_MESSAGE" value="added css and logo" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
