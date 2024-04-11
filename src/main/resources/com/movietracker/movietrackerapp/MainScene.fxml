@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.movietracker.movietrackerapp.MovieTrackerController"
+      stylesheets="@styles.css">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+  </padding>
+
+  <TableView fx:id="tableView">
+    <columns>
+      <TableColumn text="Title" prefWidth="150">
+        <cellValueFactory>
+          <PropertyValueFactory property="title"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn text="Year" prefWidth="100">
+        <cellValueFactory>
+          <PropertyValueFactory property="year"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn text="Worldwide Gross" prefWidth="150">
+        <cellValueFactory>
+          <PropertyValueFactory property="worldwideGross"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn text="Budget" prefWidth="100">
+        <cellValueFactory>
+          <PropertyValueFactory property="budget"/>
+        </cellValueFactory>
+      </TableColumn>
+    </columns>
+  </TableView>
+
+</VBox>

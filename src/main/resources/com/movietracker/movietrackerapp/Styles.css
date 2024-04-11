@@ -1,0 +1,35 @@
+/* styles.css */
+
+/* Apply background color to the root */
+.root {
+    -fx-background-color: #f0f0f0;
+}
+
+/* Style TableView */
+.tableview {
+    -fx-background-color: #ffffff;
+}
+
+/* Style PieChart */
+.chartpie {
+    -fx-background-color: #ffffff;
+}
+
+/* Style Button */
+.button {
+    -fx-background-color: #4CAF50; /* Green */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-border-radius: 10px;
+}
+
+/* Style Button when hovered */
+.button:hover {
+    -fx-background-color: #45a049; /* Darker Green */
+}
+
+/* Style Label */
+.label {
+    -fx-font-size: 18px;
+    -fx-text-fill: #333333;
+}
